@@ -11,7 +11,9 @@ const errorHandler= require('./error-handlers/500')
 app.use(express.json());
 app.use(ClothesRoute);
 app.use(foodsRoute);
-
+app.get('/',(req,res)=>{
+    res.send('Hello to the main page')
+})
 app.use(errorHandler);
 app.use('*',pageNotFound)
 function start(port){
