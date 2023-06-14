@@ -11,11 +11,11 @@ router.delete('/foods/:id',deletefood);
 
 
 async function getAllfoods(req,res){
-    const URL = await food.findAll();
+    const URL = await food.read();
     res.status(200).json(URL);
 };
 async function getSpecificfood(req,res){
-    const URL = await food.findOne({where:{id:req.params.id}});
+    const URL = await food.read(req.params.id);
     res.status(200).send(URL);
 };
 async function addfood(req,res){
@@ -23,12 +23,11 @@ async function addfood(req,res){
     res.status(201).json(URL);
 };
 async function updatefood(req,res){
-    const URL = await food.findOne({where:{id:req.params.id}})
-    const newURL = await URL.update(req.body)
-    res.status(201).send(newURL);
+    const URL = await food.update(req.params.id,req.body)
+    res.status(201).send(URL);
 };
 async function deletefood(req,res){
-    const URL = food.destroy({where:{id:req.params.id}});
+    const URL = food.delete(req.params.id);
     res.status(204).send(URL);
 ;}
 
