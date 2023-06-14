@@ -41,15 +41,11 @@ const clothesCustomersCollection = new Collection(clothesCustomersModel)
 const clothesCustomersRelationModel = clothesCustomersRelation(sequelize, DataTypes)
 const clothesCustomersRelationCollection = new Collection(clothesCustomersRelationModel)
 
-clothesCustomersModel.belongsToMany(clothesModel, { through: "clothesCustomersRelation",
-    foreignKey: 'clothesCustomerId',
-    otherKey: 'clotheId',
-} );
-clothesModel.belongsToMany(clothesCustomersModel, { through: "clothesCustomersRelation"},{
-    foreignKey: 'clotheId',
-    otherKey: 'clothesCustomerId',
-}) 
+clothesCustomersModel.belongsToMany(clothesModel, { through: clothesCustomersRelationModel});
+clothesModel.belongsToMany(clothesCustomersModel, { through: clothesCustomersRelationModel}) 
 
+foodCustomersModel.belongsToMany(foodModel, { through: foodCustomersRelationModel});
+foodModel.belongsToMany(foodCustomersModel, { through: foodCustomersRelationModel}) 
 
 
 module.exports = {

@@ -24,12 +24,12 @@ async function getAllclothesCustomersRelation(req,res){
     res.status(200).json(URL);
 };
 async function getSpecificCustomerClothes(req,res){
-    const URL = await clothesCustomersRelation.readForCustomer(req.params.id);
+    const URL = await clothesCustomersRelation.readForCustomer(req.params.id,Clothes.model);
     res.status(200).send(URL);
 };
 
 async function getSpecificClothCustomers(req,res){
-    const URL = await clothesCustomersRelation.readForCloth(req.params.id,clothesCustomers);
+    const URL = await clothesCustomersRelation.readForCloth(req.params.id,clothesCustomers.model);
     res.status(200).send(URL);
 };
 
@@ -40,7 +40,7 @@ async function addclothesCustomersRelation(req,res){
 };
 
 async function deleteclothesCustomersRelation(req,res){
-    const URL = clothesCustomersRelation.deleteRelation(req.params.id,Clothes);
+    const URL = clothesCustomersRelation.deleteRelation(req.params.id);
     res.status(204).send(URL);
 ;}
 
