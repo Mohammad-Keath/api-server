@@ -1,14 +1,22 @@
 'use strict';
+const food = require('./food')
+const foodCustomers = require('./foodCustomers')
 const foodCustomersRelation = (sequelize, DataTypes) =>
     sequelize.define("foodCustomersRelation", {
-        customerID: {
+        foodCustomerId: {
             type: DataTypes.INTEGER,
+            references :{
+                model:food,
+                key:'id'
+            }
         },
-        thisCustomerFoodId: {
+         foodId: {
             type: DataTypes.INTEGER,
-        },
-      
-    
+            references :{
+                model:foodCustomers,
+                key:'id'
+            }
+        }
     })
 
 

@@ -6,7 +6,7 @@ const { foodCustomersRelation }=require('../models/index');
 router.get('/foodCustomersRelations',getAllfoodCustomersRelations);
 router.get('/foodCustomersRelations/:id',getSpecificfoodCustomersRelation);
 router.post("/foodCustomersRelations",addfoodCustomersRelation);
-router.put('/foodCustomersRelations/:id',updatefoodCustomersRelation);
+// router.put('/foodCustomersRelations/:id',updatefoodCustomersRelation);
 router.delete('/foodCustomersRelations/:id',deletefoodCustomersRelation);
 
 
@@ -22,10 +22,10 @@ async function addfoodCustomersRelation(req,res){
     const URL = await foodCustomersRelation.create(req.body);
     res.status(201).json(URL);
 };
-async function updatefoodCustomersRelation(req,res){
-    const URL = await foodCustomersRelation.update(req.params.id,req.body)
-    res.status(201).send(URL);
-};
+// async function updatefoodCustomersRelation(req,res){
+//     const URL = await foodCustomersRelation.update(req.params.id,req.body)
+//     res.status(201).send(URL);
+// };
 async function deletefoodCustomersRelation(req,res){
     const URL = foodCustomersRelation.delete(req.params.id);
     res.status(204).send(URL);

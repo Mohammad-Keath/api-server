@@ -46,5 +46,21 @@ async readForCloth(id,model) {
         });
         return records
   }
+  async readForfoodCustomer(id,model) {
+    let  records = await this.model.findAll({ where: { clothesCustomerId: id },
+      // include:{
+      //     model: model,
+      // }
+  });
+    return records
+}
+async readForFood(id,model) {
+    let  records = await this.model.findAll({ where: { clotheId: id },
+        // include:{
+        //     model: model,
+        // } 
+    });
+    return records
+}
 }
 module.exports = Collection
