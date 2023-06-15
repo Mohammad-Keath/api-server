@@ -24,28 +24,30 @@
 
 - post
 
-       |/cloth| (add cloth)|
-       |------|------------|
-       |/clothesCustomer| (add customer to the clothes shop)|
-       |/clothesCustomersRelation | (add new relation between clothes and their customers)|
-       |/food | (add new food)|
-       |/foodCustomer | (add new customer to the food resturant)|
-       |/foodCustomersRelation | (add new relation between food and food)|
+       | /cloth| (add cloth)|
+       |-------|------------|
+       | /clothesCustomer| (add customer to the clothes shop)|
+       | /clothesCustomersRelation | (add new relation between clothes and their customers)|
+       | /food | (add new food)|
+       | /foodCustomer | (add new customer to the food resturant)|
+       | /foodCustomersRelation | (add new relation between food and food)|
 
 
 - put
-       |/cloth/:id |(update cloth)|
-       |-----------|--------------|
-       |/clothesCustomer/:id |(update customer of cloth)|
-       |/food/:id | (update one food)|
-       |/foodCustomer/:id | (update one customer detail of the food resturant)|
+
+       | /cloth/:id | (update cloth) |
+       |------------|--------------|
+       | /clothesCustomer/:id |(update customer of cloth)|
+       | /food/:id | (update one food)|
+       | /foodCustomer/:id | (update one customer detail of the food resturant)|
 
 
 - delete
-       |/cloth/:id| (delete cloth)|
-       |----------|---------------|
-       |/clothesCustomer/:id |(delete customer of cloth)|
-       |/clothesCustomersRelation/:id |(delete all relation of one type of cloth)|
-       |/food/:id  |(delete one food)|
-       |/foodCustomer/:id | (delete one custumer for the food resturant)|
-       |/foodCustomersRelations/:id |(delete all relations of one food)|
+
+       | /cloth/:id| (delete cloth)|
+       |-----------|---------------|
+       | /clothesCustomer/:id |(delete customer of cloth)|
+       | /clothesCustomersRelation/:id |(delete all relation of one type of cloth)|
+       | /food/:id  |(delete one food)|
+       | /foodCustomer/:id | (delete one custumer for the food resturant)|
+       | /foodCustomersRelations/:id |(delete all relations of one food)|
