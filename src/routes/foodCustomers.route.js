@@ -4,10 +4,10 @@ const router = express.Router();
 const { foodCustomers }=require('../models/index');
 
 router.get('/foodCustomers',getAllfoodCustomerss);
-router.get('/foodCustomers/:id',getSpecificfoodCustomers);
-router.post("/foodCustomers",addfoodCustomers);
-router.put('/foodCustomers/:id',updatefoodCustomers);
-router.delete('/foodCustomers/:id',deletefoodCustomers);
+router.get('/foodCustomer/:id',getSpecificfoodCustomers);
+router.post("/foodCustomer",addfoodCustomers);
+router.put('/foodCustomer/:id',updatefoodCustomers);
+router.delete('/foodCustomer/:id',deletefoodCustomers);
 
 
 async function getAllfoodCustomerss(req,res){

@@ -7,10 +7,10 @@ const { Clothes }=require('../models/index');
 
 
 router.get('/clothes',getAllClothes);
-router.get('/clothes/:id',getSpecificCloth);
-router.post("/clothes",addCloth);
-router.put('/clothes/:id',updateCloth);
-router.delete('/clothes/:id',deleteCloth);
+router.get('/cloth/:id',getSpecificCloth);
+router.post("/cloth",addCloth);
+router.put('/cloth/:id',updateCloth);
+router.delete('/cloth/:id',deleteCloth);
 
 
 async function getAllClothes(req,res){

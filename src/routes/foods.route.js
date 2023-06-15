@@ -3,11 +3,11 @@ const express = require('express');
 const router = express.Router();
 const { food }=require('../models/index');
 
-router.get('/foods',getAllfoods);
-router.get('/foods/:id',getSpecificfood);
-router.post("/foods",addfood);
-router.put('/foods/:id',updatefood);
-router.delete('/foods/:id',deletefood);
+router.get('/food',getAllfoods);
+router.get('/food/:id',getSpecificfood);
+router.post("/food",addfood);
+router.put('/food/:id',updatefood);
+router.delete('/food/:id',deletefood);
 
 
 async function getAllfoods(req,res){

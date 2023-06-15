@@ -7,10 +7,10 @@ const { clothesCustomers }=require('../models/index');
 
 
 router.get('/clothesCustomers',getAllclothesCustomers);
-router.get('/clothesCustomers/:id',getSpecificclothesCustomer);
-router.post("/clothesCustomers",addclothesCustomer);
-router.put('/clothesCustomers/:id',updateclothesCustomer);
-router.delete('/clothesCustomers/:id',deleteclothesCustomer);
+router.get('/clothesCustomer/:id',getSpecificclothesCustomer);
+router.post("/clothesCustomer",addclothesCustomer);
+router.put('/clothesCustomer/:id',updateclothesCustomer);
+router.delete('/clothesCustomer/:id',deleteclothesCustomer);
 
 
 async function getAllclothesCustomers(req,res){
