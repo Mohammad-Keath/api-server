@@ -5,15 +5,15 @@
  ##Documintation:
  - get
     
-      | /clothes| (show all clothes)|
-      |---------|-------------------|
-      | /cloth/:id| (show specific cloth)|
-      | /clothesCustomers|  (show all Customers of clothes shop)|
-      | /clothesCustomer/:id |(show one customer of clothes shop)|
-      | /clothesCustomersRelation|  (show all relations between clothes and their customers)|
-      | /theCustomerClothes/:id|  (show all clothes that this customer bought)|
+      | /clothes| (show all clothes) |
+      |---------|--------------------|
+      | /cloth/:id| (show specific cloth) |
+      | /clothesCustomers |  (show all Customers of clothes shop) |
+      | /clothesCustomer/:id | (show one customer of clothes shop) |
+      | /clothesCustomersRelation |  (show all relations between clothes and their customers)|
+      | /theCustomerClothes/:id |  (show all clothes that this customer bought)|
       | /theClothCustomers/:id  | (show all customers who bought this cloth)|
-      | /food | (show all foods)|
+      | /food | (show all foods) |
       | /food/:id | (show specific food)|
       | /foodCustomers | (show all customer of the food resturant)|
       | /foodCustomer/:id | (show one custumer of the food resturant)|
