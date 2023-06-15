@@ -4,7 +4,7 @@
 
  ## Documintation:
  - get
-      |GET     |
+      |GET|----|
       |---|----|
       | /clothes| (show all clothes) |
       | /cloth/:id| (show specific cloth) |
@@ -20,17 +20,13 @@
       | /foodCustomersRelations | ( show all relations between food and customers)|
       | /thecustomerfoods/:id |  (show all foods of one customer)|
       | /thefoodCustomers/:id |  (show all customer of one food)|
-
-
-- post
-
-       | /cloth | (add cloth)|
-       |--------|------------|
-       | /clothesCustomer | (add customer to the clothes shop)|
-       | /clothesCustomersRelation | (add new relation between clothes and their customers)|
-       | /food | (add new food)|
-       | /foodCustomer | (add new customer to the food resturant)|
-       | /foodCustomersRelation | (add new relation between food and food)|
+      | POST|   |
+      | /cloth | (add cloth)|
+      | /clothesCustomer | (add customer to the clothes shop)|
+      | /clothesCustomersRelation | (add new relation between clothes and their customers)|
+      | /food | (add new food)|
+      | /foodCustomer | (add new customer to the food resturant)|
+      | /foodCustomersRelation | (add new relation between food and food)|
 
 
 - put
