@@ -24,9 +24,9 @@
 
 - post
 
-       | /cloth| (add cloth)|
-       |-------|------------|
-       | /clothesCustomer| (add customer to the clothes shop)|
+       | /cloth | (add cloth)|
+       |--------|------------|
+       | /clothesCustomer | (add customer to the clothes shop)|
        | /clothesCustomersRelation | (add new relation between clothes and their customers)|
        | /food | (add new food)|
        | /foodCustomer | (add new customer to the food resturant)|
