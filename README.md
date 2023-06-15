@@ -5,7 +5,7 @@
  ## Documintation:
  - get
       |GET|
-      |---|
+      |---|----|
       | /clothes| (show all clothes) |
       | /cloth/:id| (show specific cloth) |
       | /clothesCustomers |  (show all Customers of clothes shop) |
