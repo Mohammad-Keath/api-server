@@ -4,7 +4,7 @@
 
  ## Documintation:
  - get
-      |GET|
+      |GET     |
       |---|----|
       | /clothes| (show all clothes) |
       | /cloth/:id| (show specific cloth) |
