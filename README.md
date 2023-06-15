@@ -2,7 +2,7 @@
  
  [online deploying website](https://api-server-oydz.onrender.com/)
 
- ##Documintation:
+ #Documintation:
  - get
     
       | /clothes| (show all clothes) |
