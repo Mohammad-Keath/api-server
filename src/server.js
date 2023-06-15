@@ -2,9 +2,9 @@ const express = require('express');
 const app = express();
 const ClothesRoute = require('./routes/clothes.route');
 const clothesCustomersRoute = require('./routes/clothesCustomers.route');
-const clothesCustomersRelationRoute = require('./routes/foodCustomersRelation.route')
+const clothesCustomersRelationRoute = require('./routes/clothesCustomersRelation.route')
 const foodsRoute = require('./routes/foods.route');
-const foodsCustomersRelationRoute = require('./routes/clothesCustomersRelation.route');
+const foodsCustomersRelationRoute = require('./routes/foodCustomersRelation.route');
 const foodCustomersRoute = require('./routes/foodCustomers.route')
 
 

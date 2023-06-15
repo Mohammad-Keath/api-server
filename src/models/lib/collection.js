@@ -30,6 +30,12 @@ async deleteRelation(id){
         let record = await this.model.destroy({where:{clotheId:id}})
         return record
     }
+
+    async deleteFoodRelation(id){
+        let record = await this.model.destroy({where:{foodId:id}})
+        return record
+    }
+
 async readForCustomer(id,model) {
           let  records = await this.model.findAll({ where: { clothesCustomerId: id },
             // include:{
@@ -46,6 +52,27 @@ async readForCloth(id,model) {
         });
         return records
   }
+
+
+  async readForfoodCustomer(id,model) {
+    let  records = await this.model.findAll({ where: { foodCustomerId: id },
+      // include:{
+      //     model: model,
+      // }
+  });
+    return records
+}
+async readForFood(id,model) {
+  let  records = await this.model.findAll({ where: { foodId: id },
+      // include:{
+      //     model: model,
+      // } 
+  });
+  return records
+}
+
+
+
   async readForfoodCustomer(id,model) {
     let  records = await this.model.findAll({ where: { clothesCustomerId: id },
       // include:{
