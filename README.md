@@ -2,11 +2,11 @@
  
  [online deploying website](https://api-server-oydz.onrender.com/)
 
- #Documintation:
+ ## Documintation:
  - get
-    
+      |GET|
+      |---|
       | /clothes| (show all clothes) |
-      |---------|--------------------|
       | /cloth/:id| (show specific cloth) |
       | /clothesCustomers |  (show all Customers of clothes shop) |
       | /clothesCustomer/:id | (show one customer of clothes shop) |
