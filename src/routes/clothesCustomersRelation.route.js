@@ -11,8 +11,8 @@ router.post("/clothesCustomersRelation",addclothesCustomersRelation);
 
 router.delete('/clothesCustomersRelation/:id',deleteclothesCustomersRelation);
 
-router.get('/theCustomerClothes/:id',getSpecificCustomerClothes);
-router.get('/theClothCustomers/:id',getSpecificClothCustomers);
+// router.get('/theCustomerClothes/:id',getSpecificCustomerClothes);
+// router.get('/theClothCustomers/:id',getSpecificClothCustomers);
 
 
 
@@ -23,15 +23,15 @@ async function getAllclothesCustomersRelation(req,res){
     const URL = await clothesCustomersRelation.read();
     res.status(200).json(URL);
 };
-async function getSpecificCustomerClothes(req,res){
-    const URL = await clothesCustomersRelation.readForCustomer(req.params.id,Clothes.model);
-    res.status(200).send(URL);
-};
+// async function getSpecificCustomerClothes(req,res){
+//     const URL = await clothesCustomersRelation.readForCustomer(req.params.id,Clothes.model);
+//     res.status(200).send(URL);
+// };
 
-async function getSpecificClothCustomers(req,res){
-    const URL = await clothesCustomersRelation.readForCloth(req.params.id,clothesCustomers.model);
-    res.status(200).send(URL);
-};
+// async function getSpecificClothCustomers(req,res){
+//     const URL = await clothesCustomersRelation.readForCloth(req.params.id,clothesCustomers.model);
+//     res.status(200).send(URL);
+// };
 
 
 async function addclothesCustomersRelation(req,res){
