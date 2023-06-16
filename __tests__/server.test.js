@@ -17,7 +17,7 @@ describe('server testing',()=>{
         expect(responce.error).toBeCalled
     })
     test('Create a record using POST',async ()=>{
-        const responce = await  request.post('/clothes').send({
+        const responce = await  request.post('/cloth').send({
             "Name" :"mankoosh",
             "type" : "jeans",
             "hot" : "true",
@@ -30,22 +30,22 @@ describe('server testing',()=>{
         expect(responce.status).toBe(200)
     })
     test('Read a record using GET',async()=>{
-        const responce=await request.get('/clothes/1')
+        const responce=await request.get('/cloth/1')
         expect(responce.status).toBe(200)
     })
     test('Update a record using PUT',async()=>{
       
-        const responce=await request.put('/clothes/1')
+        const responce=await request.put('/cloth/1')
         expect( responce.status).toBe(201)
     })
     test('Destroy a record using DELETE',async()=>{
-    const responce = await request.delete('/clothes/1')
+    const responce = await request.delete('/cloth/1')
         expect(responce.status).toBe(204)
     })
     
 
     test('Create a record using POST on foods',async ()=>{
-        const responce = await  request.post('/foods').send({
+        const responce = await  request.post('/food').send({
             "Name": "falafel",
             "type": "syrian",
             "hot": true,
@@ -54,20 +54,20 @@ describe('server testing',()=>{
         expect(responce.status).toBe(201)
     })
     test('Read a list of records using GET on foods',async()=>{
-        const responce=await request.get('/foods')
+        const responce=await request.get('/food')
         expect(responce.status).toBe(200)
     })
     test('Read a record using GET on foods',async()=>{
-        const responce=await request.get('/foods/1')
+        const responce=await request.get('/food/1')
         expect(responce.status).toBe(200)
     })
     test('Update a record using PUT on foods',async()=>{
       
-        const responce=await request.put('/foods/1')
+        const responce=await request.put('/food/1')
         expect( responce.status).toBe(201)
     })
     test('Destroy a record using DELETE on foods',async()=>{
-    const responce = await request.delete('/foods/1')
+    const responce = await request.delete('/food/1')
         expect(responce.status).toBe(204)
     })
 })

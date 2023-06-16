@@ -54,22 +54,22 @@ async readRelationDetails(id,model) {
   }
 
 
-  async readForfoodCustomer(id,model) {
-    let  records = await this.model.findAll({ where: { foodCustomerId: id },
-    //   include:{
-    //       model: model,
-    //   }
-  });
-    return records
-}
-async readForFood(id,model) {
-  let  records = await this.model.findAll({ where: { foodId: id },
-    //   include:{
-    //       model: model,
-    //   } 
-  });
-  return records
-}
+//   async readForfoodCustomer(id,model) {
+//     let  records = await this.model.findAll({ where: { foodCustomerId: id },
+//     //   include:{
+//     //       model: model,
+//     //   }
+//   });
+//     return records
+// }
+// async readForFood(id,model) {
+//   let  records = await this.model.findAll({ where: { foodId: id },
+//     //   include:{
+//     //       model: model,
+//     //   } 
+//   });
+//   return records
+// }
 
 
 
