@@ -1,13 +1,19 @@
 'use strict';
 const express = require('express');
 const router = express.Router();
-const { food }=require('../models/index');
+const { food,foodCustomers }=require('../models/index');
 
 router.get('/food',getAllfoods);
 router.get('/food/:id',getSpecificfood);
 router.post("/food",addfood);
 router.put('/food/:id',updatefood);
 router.delete('/food/:id',deletefood);
+
+router.get('/thefoodCustomers/:id',getCustumersForSpecificfoodRelation);
+async function getCustumersForSpecificfoodRelation(req,res){
+    const URL = await food.readRelationDetails(req.params.id,foodCustomers.model);
+    res.status(200).send(URL);
+};
 
 
 async function getAllfoods(req,res){
