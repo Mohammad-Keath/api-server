@@ -3,7 +3,7 @@
  [online deploying website](https://api-server-oydz.onrender.com/)
 
  ## PullRequest Link
- [PR Link]([https://api-server-oydz.onrender.com/](https://github.com/Mohammad-Keath/api-server/pull/8))
+ [PR Link](https://api-server-oydz.onrender.com/](https://github.com/Mohammad-Keath/api-server/pull/8))
  
 
  ## Documintation:
