@@ -2,7 +2,7 @@
 // const Collection = require('../models/lib/collection')
 const express = require('express');
 const router = express.Router();
-const { Clothes }=require('../models/index');
+const { Clothes,clothesCustomers }=require('../models/index');
 
 
 
@@ -11,6 +11,12 @@ router.get('/cloth/:id',getSpecificCloth);
 router.post("/cloth",addCloth);
 router.put('/cloth/:id',updateCloth);
 router.delete('/cloth/:id',deleteCloth);
+
+router.get('/theCustomerClothes/:id',getSpecificCustomerClothes);
+async function getSpecificCustomerClothes(req,res){
+    const URL = await Clothes.readRelationDetails(req.params.id,clothesCustomers.model);
+    res.status(200).send(URL);
+};
 
 
 async function getAllClothes(req,res){

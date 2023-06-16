@@ -36,19 +36,19 @@ async deleteRelation(id){
         return record
     }
 
-async readForCustomer(id,model) {
-          let  records = await this.model.findAll({ where: { clothesCustomerId: id },
-            // include:{
-            //     model: model,
-            // }
-        });
-          return records
-    }
-async readForCloth(id,model) {
-        let  records = await this.model.findAll({ where: { clotheId: id },
-            // include:{
-            //     model: model,
-            // } 
+// async readForCustomer(id,model) {
+//           let  records = await this.model.findAll({ where: {  id },
+//             include:{
+//                 model: model,
+//             }
+//         });
+//           return records
+//     }
+async readRelationDetails(id,model) {
+        let  records = await this.model.findOne({ where: { id },
+            include:{
+                model: model,
+            } 
         });
         return records
   }
@@ -56,38 +56,22 @@ async readForCloth(id,model) {
 
   async readForfoodCustomer(id,model) {
     let  records = await this.model.findAll({ where: { foodCustomerId: id },
-      // include:{
-      //     model: model,
-      // }
+    //   include:{
+    //       model: model,
+    //   }
   });
     return records
 }
 async readForFood(id,model) {
   let  records = await this.model.findAll({ where: { foodId: id },
-      // include:{
-      //     model: model,
-      // } 
+    //   include:{
+    //       model: model,
+    //   } 
   });
   return records
 }
 
 
 
-  async readForfoodCustomer(id,model) {
-    let  records = await this.model.findAll({ where: { clothesCustomerId: id },
-      // include:{
-      //     model: model,
-      // }
-  });
-    return records
-}
-async readForFood(id,model) {
-    let  records = await this.model.findAll({ where: { clotheId: id },
-        // include:{
-        //     model: model,
-        // } 
-    });
-    return records
-}
 }
 module.exports = Collection

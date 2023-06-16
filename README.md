@@ -4,8 +4,8 @@
 
  ## Documintation:
  ### GET
- |GET|    |
- |---|----|
+ | ROUTE|DETAIL|
+ |------|------|
  | /clothes| (show all clothes) |
  | /cloth/:id| (show specific cloth) |
  | /clothesCustomers |  (show all Customers of clothes shop) |
@@ -23,8 +23,8 @@
 
  ### POST
 
- | POST|   |
- |-----|---|
+ | ROUTE|DETAIL|
+ |------|------|
  | /cloth | (add cloth)|
  | /clothesCustomer | (add customer to the clothes shop)|
  | /clothesCustomersRelation | (add new relation between clothes and their customers)|
@@ -35,8 +35,8 @@
  
  ### PUT
 
- |  PUT    |     |
- |---------|-----|
+ | ROUTE|DETAIL|
+ |------|------|
  | /cloth/:id | (update cloth) |
  | /clothesCustomer/:id |(update customer of cloth)|
  | /food/:id | (update one food)|
@@ -44,9 +44,9 @@
 
  
  ### DELETE
-
- | DELETE|    |
- |-------|----|
+ 
+ | ROUTE|DETAIL|
+ |------|------|
  | /cloth/:id| (delete cloth)|
  | /clothesCustomer/:id |(delete customer of cloth)|
  | /clothesCustomersRelation/:id |(delete all relation of one type of cloth)|
