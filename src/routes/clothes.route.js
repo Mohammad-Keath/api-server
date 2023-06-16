@@ -12,7 +12,7 @@ router.post("/cloth",addCloth);
 router.put('/cloth/:id',updateCloth);
 router.delete('/cloth/:id',deleteCloth);
 
-router.get('/theCustomerClothes/:id',getSpecificCustomerClothes);
+router.get('/theClothCustomers/:id',getSpecificCustomerClothes);
 async function getSpecificCustomerClothes(req,res){
     const URL = await Clothes.readRelationDetails(req.params.id,clothesCustomers.model);
     res.status(200).send(URL);
